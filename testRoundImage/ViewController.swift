@@ -8,6 +8,11 @@
 
 import UIKit
 
+class CellModel :NSObject{
+    var title:String!
+    var bussiness = { return }
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var tableView:UITableView!
@@ -21,23 +26,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view.addSubview(tableView)
         tableView.dataSource = self
         tableView.delegate = self
-        
+        tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
         self.setupData()
     }
     
     func setupData(){
         data = NSMutableArray()
        
-        var dict = NSMutableDictionary()
-        dict["title"] = "cornerRadius"
-        //dict["vc"] =
-        data.addObject(dict)
+        var cellModel = CellModel()
+        cellModel.title = "cornerRadius"
+        cellModel.bussiness = {
+            let vc = VC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        data .addObject(cellModel)
         
         
-        dict = NSMutableDictionary()
-        dict["title"] = "cornerRadius"
-        dict["vc"] = "VC2"
-        data.addObject(dict)
+        cellModel = CellModel()
+        cellModel.title = "高效的方法"
+        cellModel.bussiness = {
+            let vc = VC2()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        data .addObject(cellModel)
+        
         
     }
 
@@ -50,20 +62,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = data[indexPath.row]["title"] as? String
+        cell.textLabel?.text = data[indexPath.row].title
         
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let str:String = data[indexPath.row]["vc"] as! String
-//        let vcClass:AnyClass = NSClassFromString(str)!
-//        
-//        let vc:UIViewController = vcClass()
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let bussiness = data[indexPath.row].bussiness
+        bussiness()
     }
 
 }

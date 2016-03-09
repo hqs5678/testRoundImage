@@ -12,6 +12,10 @@
 		BF2B1AA11C8C6D2800A6CDA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B1A9F1C8C6D2800A6CDA7 /* Main.storyboard */; };
 		BF2B1AA31C8C6D2800A6CDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2B1AA21C8C6D2800A6CDA7 /* Assets.xcassets */; };
 		BF2B1AA61C8C6D2800A6CDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B1AA41C8C6D2800A6CDA7 /* LaunchScreen.storyboard */; };
+		BFF361D61C90679C00D5D153 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF361D51C90679C00D5D153 /* test.png */; };
+		BFF361D81C9067F100D5D153 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF361D71C9067F100D5D153 /* VC.swift */; };
+		BFF361DA1C90697900D5D153 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF361D91C90697900D5D153 /* VC2.swift */; };
+		BFF361DD1C906BA400D5D153 /* UIView_RoundCorner_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF361DC1C906BA400D5D153 /* UIView_RoundCorner_Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		BF2B1AA21C8C6D2800A6CDA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF2B1AA51C8C6D2800A6CDA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF2B1AA71C8C6D2800A6CDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF361D51C90679C00D5D153 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		BFF361D71C9067F100D5D153 /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
+		BFF361D91C90697900D5D153 /* VC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
+		BFF361DC1C906BA400D5D153 /* UIView_RoundCorner_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_RoundCorner_Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,14 @@
 			children = (
 				BF2B1A9B1C8C6D2800A6CDA7 /* AppDelegate.swift */,
 				BF2B1A9D1C8C6D2800A6CDA7 /* ViewController.swift */,
+				BFF361D71C9067F100D5D153 /* VC.swift */,
+				BFF361D91C90697900D5D153 /* VC2.swift */,
 				BF2B1A9F1C8C6D2800A6CDA7 /* Main.storyboard */,
+				BFF361D51C90679C00D5D153 /* test.png */,
 				BF2B1AA21C8C6D2800A6CDA7 /* Assets.xcassets */,
 				BF2B1AA41C8C6D2800A6CDA7 /* LaunchScreen.storyboard */,
 				BF2B1AA71C8C6D2800A6CDA7 /* Info.plist */,
+				BFF361DC1C906BA400D5D153 /* UIView_RoundCorner_Extension.swift */,
 			);
 			path = testRoundImage;
 			sourceTree = "<group>";
@@ -122,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF361D61C90679C00D5D153 /* test.png in Resources */,
 				BF2B1AA61C8C6D2800A6CDA7 /* LaunchScreen.storyboard in Resources */,
 				BF2B1AA31C8C6D2800A6CDA7 /* Assets.xcassets in Resources */,
 				BF2B1AA11C8C6D2800A6CDA7 /* Main.storyboard in Resources */,
@@ -136,7 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2B1A9E1C8C6D2800A6CDA7 /* ViewController.swift in Sources */,
+				BFF361DD1C906BA400D5D153 /* UIView_RoundCorner_Extension.swift in Sources */,
 				BF2B1A9C1C8C6D2800A6CDA7 /* AppDelegate.swift in Sources */,
+				BFF361D81C9067F100D5D153 /* VC.swift in Sources */,
+				BFF361DA1C90697900D5D153 /* VC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +270,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hqs.testRoundImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "testRoundImage/testRoundImage-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -268,7 +284,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hqs.testRoundImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "testRoundImage/testRoundImage-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
