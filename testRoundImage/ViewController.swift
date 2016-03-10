@@ -37,6 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cellModel.title = "cornerRadius"
         cellModel.bussiness = {
             let vc = VC()
+            vc.title = "cornerRadius"
             self.navigationController?.pushViewController(vc, animated: true)
         }
         data .addObject(cellModel)
@@ -46,6 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cellModel.title = "高效的方法"
         cellModel.bussiness = {
             let vc = VC2()
+            vc.title = "高效"
             self.navigationController?.pushViewController(vc, animated: true)
         }
         data .addObject(cellModel)

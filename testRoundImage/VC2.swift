@@ -29,13 +29,13 @@ class VC2: UITableViewController{
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         
         cell.imageView?.image  = UIImage(named: "test")
         cell.textLabel?.text = "\(indexPath.row)"
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
-        cell.imageView?.setRoundCorner2(30)
+        cell.imageView?.image = cell.imageView!.image!.setRoundedCorner(radius: 30, CGSizeMake(60, 60))
         
         return cell
     }

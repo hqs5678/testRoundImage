@@ -12,10 +12,12 @@
 		BF2B1AA11C8C6D2800A6CDA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B1A9F1C8C6D2800A6CDA7 /* Main.storyboard */; };
 		BF2B1AA31C8C6D2800A6CDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2B1AA21C8C6D2800A6CDA7 /* Assets.xcassets */; };
 		BF2B1AA61C8C6D2800A6CDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B1AA41C8C6D2800A6CDA7 /* LaunchScreen.storyboard */; };
+		BF4B5BDD1C919F3100C35327 /* UIImage+RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4B5BDC1C919F3100C35327 /* UIImage+RoundCorner.swift */; };
+		BF4B5BDF1C91A0F500C35327 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4B5BDE1C91A0F500C35327 /* CoreGraphics.framework */; };
 		BFF361D61C90679C00D5D153 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF361D51C90679C00D5D153 /* test.png */; };
 		BFF361D81C9067F100D5D153 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF361D71C9067F100D5D153 /* VC.swift */; };
 		BFF361DA1C90697900D5D153 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF361D91C90697900D5D153 /* VC2.swift */; };
-		BFF361DD1C906BA400D5D153 /* UIView_RoundCorner_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF361DC1C906BA400D5D153 /* UIView_RoundCorner_Extension.swift */; };
+		BFF361DD1C906BA400D5D153 /* UIView+RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF361DC1C906BA400D5D153 /* UIView+RoundCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +28,12 @@
 		BF2B1AA21C8C6D2800A6CDA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF2B1AA51C8C6D2800A6CDA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF2B1AA71C8C6D2800A6CDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF4B5BDC1C919F3100C35327 /* UIImage+RoundCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RoundCorner.swift"; sourceTree = "<group>"; };
+		BF4B5BDE1C91A0F500C35327 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BFF361D51C90679C00D5D153 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		BFF361D71C9067F100D5D153 /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		BFF361D91C90697900D5D153 /* VC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
-		BFF361DC1C906BA400D5D153 /* UIView_RoundCorner_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_RoundCorner_Extension.swift; sourceTree = "<group>"; };
+		BFF361DC1C906BA400D5D153 /* UIView+RoundCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorner.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4B5BDF1C91A0F500C35327 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,7 @@
 		BF2B1A8F1C8C6D2800A6CDA7 = {
 			isa = PBXGroup;
 			children = (
+				BF4B5BDE1C91A0F500C35327 /* CoreGraphics.framework */,
 				BF2B1A9A1C8C6D2800A6CDA7 /* testRoundImage */,
 				BF2B1A991C8C6D2800A6CDA7 /* Products */,
 			);
@@ -71,7 +77,8 @@
 				BF2B1AA21C8C6D2800A6CDA7 /* Assets.xcassets */,
 				BF2B1AA41C8C6D2800A6CDA7 /* LaunchScreen.storyboard */,
 				BF2B1AA71C8C6D2800A6CDA7 /* Info.plist */,
-				BFF361DC1C906BA400D5D153 /* UIView_RoundCorner_Extension.swift */,
+				BFF361DC1C906BA400D5D153 /* UIView+RoundCorner.swift */,
+				BF4B5BDC1C919F3100C35327 /* UIImage+RoundCorner.swift */,
 			);
 			path = testRoundImage;
 			sourceTree = "<group>";
@@ -148,8 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4B5BDD1C919F3100C35327 /* UIImage+RoundCorner.swift in Sources */,
 				BF2B1A9E1C8C6D2800A6CDA7 /* ViewController.swift in Sources */,
-				BFF361DD1C906BA400D5D153 /* UIView_RoundCorner_Extension.swift in Sources */,
+				BFF361DD1C906BA400D5D153 /* UIView+RoundCorner.swift in Sources */,
 				BF2B1A9C1C8C6D2800A6CDA7 /* AppDelegate.swift in Sources */,
 				BFF361D81C9067F100D5D153 /* VC.swift in Sources */,
 				BFF361DA1C90697900D5D153 /* VC2.swift in Sources */,
